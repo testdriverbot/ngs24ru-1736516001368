@@ -1,0 +1,13 @@
+version: 4.1.35
+steps:
+  - prompt: Submit the search query.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Assert that search results are displayed.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: search results are displayed on the page

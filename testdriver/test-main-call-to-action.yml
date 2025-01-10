@@ -1,0 +1,26 @@
+version: 4.1.35
+steps:
+  - prompt: Identify the main call to action on the webpage.
+    commands:
+      - command: hover-text
+        text: Включить
+        description: enable notifications button in the popup
+        action: click
+  - prompt: Identify the main call to action on the webpage.
+    commands:
+      - command: hover-text
+        text: Apply now
+        description: apply now button in the OANDA advertisement
+        action: click
+  - prompt: Click the main call to action.
+    commands:
+      - command: hover-text
+        text: Start Trading
+        description: start trading button in the top right corner
+        action: click
+  - prompt: >-
+      Assert that the action leads to the expected outcome.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: the page displays "Ready to open a trading account"
